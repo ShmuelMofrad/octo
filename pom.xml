@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>one.unus</groupId>
+		<artifactId>parent-pom</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>octo</artifactId>
+	<packaging>pom</packaging>
+
+	<name>octo</name>
+	<url>http://unus.one</url>
+	<description>octo is parent pom for java 8 projects</description>
+
+	<organization>
+		<name>unus.one</name>
+		<url>http://unus.one</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<name>Shmuel Mofrad</name>
+			<email>mofrad@unus.one</email>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git@github.com:ShmuelMofrad/octo.git</connection>
+		<developerConnection>scm:git@github.com:ShmuelMofrad/octo.git</developerConnection>
+		<url>https://github.com/ShmuelMofrad/octo.git</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/ShmuelMofrad/octo/issues</url>
+	</issueManagement>
+
+	<licenses>
+		<license>
+			<name>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</name>
+			<distribution>repo</distribution>
+			<url>https://github.com/ShmuelMofrad/octo/blob/master/LICENSE</url>
+		</license>
+	</licenses>
+
+	<build>
+		<plugins>
+			<plugin>
+				<!-- The Compiler Plugin is used to compile the sources of your project. 
+					https://maven.apache.org/plugins/maven-compiler-plugin/ -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<inherited>true</inherited>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- comment in parent-pom -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
